@@ -1,0 +1,94 @@
+body{
+  margin:0px;
+  font-family: Arial, sans-serif;
+    }
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-bottom: 1px solid #ddd;
+}
+.left,.right {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 30px;
+  margin-left: 80px;
+}
+a#blabla{
+  font-size: 26px;
+  font-weight: 400;
+  color: #033544;
+  margin-top:10px;
+  font-size: larger;
+}
+.right a{
+  margin-left: 20px;
+  font-size:14px;
+}
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 1;;
+}
+.profile{
+  width: 35px;
+  cursor: pointer;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: rgb(255, 255, 255);
+  min-width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.dropdown-content a {
+  color: #003840;
+  padding: 12px 14px;
+  display: block;
+  font-size: 14px;
+}
+.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+.checkbox-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.option{
+  display: block;
+  border-radius: 10px;
+  padding: 1px 8px;
+}
+.option:hover{
+ background-color: aliceblue;
+}
+.option p{
+  font-size: 13px;
+}
+a{
+  text-decoration: none;
+  color: #00a8e8;
+  
+}
+h1{
+  color:#031e26c5;
+}
