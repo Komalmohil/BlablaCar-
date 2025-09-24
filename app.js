@@ -20,11 +20,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
-
+const PORT = process.env.PORT || 3000;
 mongoose.connect(process.env.mongo_uri)
   .then(() => {
     console.log("connected to db")
-    server.listen(3000, () => console.log(`Server is running`))  
+    server.listen(PORT, () => console.log(`Server is running`))  
   })
   .catch((err) => { console.log("Server err") })
 
