@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.port || 3000;
 mongoose.connect(process.env.mongo_uri)
   .then(() => {
     console.log("connected to db")
