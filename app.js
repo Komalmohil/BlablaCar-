@@ -21,11 +21,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb://localhost:27017/blabla')
-// mongoose.connect('process.env.mongo_uri')
+mongoose.connect(process.env.mongo_uri)
   .then(() => {
     console.log("connected to db")
-    server.listen(3000, () => console.log(`Server is running`))   //because app.listen creats a different instance
+    server.listen(3000, () => console.log(`Server is running`))  
   })
   .catch((err) => { console.log("Server err") })
 
