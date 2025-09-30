@@ -11,7 +11,7 @@ const cookieParser = require('cookie-parser');
 
 const app = express();
 const server = createServer(app)
-const io = new Server(server)   //creating circuit
+const io = new Server(server)   
 app.set('io', io);
 notification(io)
 
@@ -26,7 +26,8 @@ mongoose.connect(process.env.mongo_uri)
     console.log("connected to db")
     server.listen(PORT, () => console.log(`Server is running`))  
   })
-  .catch((err) => { console.log("Server err") })
+  .catch((err) => {   console.error("❌ Server error:", err);
+ console.log("Server err") })
 
 app.use((req, res, next) => {
   res.locals.userId = req.userId || null;
