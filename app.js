@@ -26,8 +26,7 @@ mongoose.connect(process.env.mongo_uri)
     console.log("connected to db")
     server.listen(PORT, () => console.log(`Server is running`))  
   })
-  .catch((err) => {   console.error("❌ Server error:", err);
- console.log("Server err") })
+  .catch((err) => {   console.error("Server error:", err);})
 
 app.use((req, res, next) => {
   res.locals.userId = req.userId || null;
