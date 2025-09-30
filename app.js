@@ -20,6 +20,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'Views'));
+
 const PORT = process.env.port || 3000;
 mongoose.connect(process.env.mongo_uri)
   .then(() => {
